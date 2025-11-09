@@ -53,6 +53,7 @@ class TiketController extends Controller
     public function detail(Transaction $transaction )
     {
         // fitur A
+        $contoh = 'windyy';
         $payment = $transaction->payment;
         $snap_token = '';
         // ini cek apakah sudah ada payment dan snap token,kalau ada gunakan itu,kalau belum buat baru
