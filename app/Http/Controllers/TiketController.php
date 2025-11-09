@@ -46,13 +46,13 @@ class TiketController extends Controller
 
         Transaction::create($validatedData);
 
-        return redirect()->route('tickets.detail', $validatedData['invoice_number'])
+        return redirect()->route('detail', $validatedData['invoice_number'])
             ->with('success', 'Tiket berhasil dipesan! Silakan cek detail tiket Anda.');
     }
 
     public function detail(Transaction $transaction )
     {
-
+        // fitur A
         $payment = $transaction->payment;
         $snap_token = '';
         // ini cek apakah sudah ada payment dan snap token,kalau ada gunakan itu,kalau belum buat baru
