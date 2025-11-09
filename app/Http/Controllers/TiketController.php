@@ -46,7 +46,7 @@ class TiketController extends Controller
 
         Transaction::create($validatedData);
 
-        return redirect()->route('detail', $validatedData['invoice_number'])
+        return redirect()->route('tickets.detail', $validatedData['invoice_number'])
             ->with('success', 'Tiket berhasil dipesan! Silakan cek detail tiket Anda.');
     }
 

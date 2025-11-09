@@ -12,6 +12,7 @@ class LoginController extends Controller
     public function index(){
         return view('/masuk');
     }
+
     public function authenticate(Request $request): RedirectResponse
     {
         $validate = [
@@ -33,7 +34,8 @@ class LoginController extends Controller
         }
 
         return back()->with('eror','email atau password yang anda masukan salah');
-}
+    }
+
         public function logout(Request $request): RedirectResponse
         {
             Auth::logout();
