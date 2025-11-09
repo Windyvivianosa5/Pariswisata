@@ -27,7 +27,7 @@
                     );
 
                 marker.on('click', function () {
-                    window.location.href = "{{ route('detailHotel', $hotel->id) }}";
+                    window.location.href = "{{ route('hotels.detail', $hotel->id) }}";
                 });
 
             @endif
@@ -40,10 +40,10 @@
     <section class="mb-16">
         <div class="text-center mb-5">
             <h1 class="text-3xl font-bold text-gray-800 mb-3">
-                Hotel di Riau
+                Hotels in Riau
             </h1>
             <p class="text-gray-600 max-w-2xl mx-auto">
-                Temukan penginapan terbaik untuk kenyamanan perjalanan Anda
+                Find the best accommodations for your travel comfort
             </p>
             <div class="w-20 h-0.5 bg-gray-300 mx-auto "></div>
         </div>
@@ -52,8 +52,8 @@
     <!-- Peta Hotel -->
     <section class="mb-16">
         <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-2">Lokasi Hotel di Peta</h2>
-            <p class="text-gray-600">Jelajahi lokasi hotel dan temukan yang terdekat dengan destinasi Anda</p>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Hotel Locations on Map</h2>
+            <p class="text-gray-600">Explore hotel locations and find those closest to your destination</p>
         </div>
         <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
             <div id="map" class="w-full h-[450px]"></div>
@@ -63,8 +63,8 @@
     <!-- Daftar Hotel -->
     <section class="mb-16">
         <div class="mb-10">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Jelajahi Hotel Populer Kami</h2>
-            <p class="text-gray-600">Pilihan akomodasi berkualitas dengan fasilitas terbaik untuk Anda</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Explore Our Popular Hotels</h2>
+            <p class="text-gray-600">Quality accommodations with the best facilities for you</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -82,7 +82,7 @@
                     <!-- Content Container -->
                     <div class="p-6">
                         <!-- Hotel Name -->
-                        <a href="{{ route('detailHotel', $hotel->id) }}" class="text-xl font-bold text-gray-800 mb-3 block hover:text-gray-600 transition-colors duration-200">
+                        <a href="{{ route('hotels.detail', $hotel->id) }}" class="text-xl font-bold text-gray-800 mb-3 block hover:text-gray-600 transition-colors duration-200">
                             {{ $hotel->name }}
                         </a>
 
@@ -115,8 +115,8 @@
 
                         <!-- Action Button -->
                         <div class="pt-4 border-t border-gray-100">
-                            <a href="{{ route('detailHotel', $hotel->id) }}" class="inline-flex items-center justify-center w-full bg-gray-800 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-200 text-sm">
-                                Lihat Detail
+                            <a href="{{ route('hotels.detail', $hotel->id) }}" class="inline-flex items-center justify-center w-full bg-gray-800 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-200 text-sm">
+                                View Details
                                 <i class="ph ph-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -130,24 +130,24 @@
     <section class="py-12 bg-gray-50 rounded-lg">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-3">Mengapa Memilih Hotel Kami?</h3>
-                <p class="text-gray-600">Kami menyediakan berbagai pilihan hotel terbaik untuk kenyamanan Anda</p>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Why Choose Our Hotels?</h3>
+                <p class="text-gray-600">We provide a variety of the best hotel choices for your comfort</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                     <div class="text-3xl mb-3">🏆</div>
-                    <h4 class="font-semibold text-gray-800 mb-2">Kualitas Terjamin</h4>
-                    <p class="text-sm text-gray-600">Hotel pilihan dengan standar pelayanan terbaik</p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Guaranteed Quality</h4>
+                    <p class="text-sm text-gray-600">Curated hotels with top service standards</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                     <div class="text-3xl mb-3">📍</div>
-                    <h4 class="font-semibold text-gray-800 mb-2">Lokasi Strategis</h4>
-                    <p class="text-sm text-gray-600">Dekat dengan pusat kota dan tempat wisata</p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Strategic Location</h4>
+                    <p class="text-sm text-gray-600">Close to the city center and attractions</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                     <div class="text-3xl mb-3">💰</div>
-                    <h4 class="font-semibold text-gray-800 mb-2">Harga Kompetitif</h4>
-                    <p class="text-sm text-gray-600">Dapatkan penawaran terbaik untuk setiap budget</p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Competitive Prices</h4>
+                    <p class="text-sm text-gray-600">Get the best deals for every budget</p>
                 </div>
             </div>
         </div>

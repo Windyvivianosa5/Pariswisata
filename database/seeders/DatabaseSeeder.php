@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             CombinedPostsSeeder::class,
+            CulinarySeeder::class,
         ]);
     }
 }

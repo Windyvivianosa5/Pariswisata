@@ -43,6 +43,7 @@ class MainResource extends Resource
                                 'koleksi_post' => 'Koleksi Post',
                                 'todo_post' => 'Todo Post',
                                 'wisata' => 'Wisata',
+                                'hero' => 'Hero',
                             ])
                             ->required()
                             ->searchable()
@@ -61,16 +62,50 @@ class MainResource extends Resource
                             ])
                             ->maxSize(5120) // 5MB
                             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
-                            ->placeholder('Upload image'),
+                            ->placeholder('Upload image')
+                            ->hidden(fn (Forms\Get $get) => $get('category') === 'hero'),
 
                         Forms\Components\Textarea::make('description')
                             ->label('Description')
                             ->rows(4)
                             ->maxLength(1000)
-                            ->placeholder('Enter post description (optional)'),
+                            ->placeholder('Enter post description (optional)')
+                            ->hidden(fn (Forms\Get $get) => $get('category') === 'hero'),
                     ])
                     ->columns(2)
                     ->collapsible(),
+
+                Forms\Components\Section::make('Hero Information')
+                    ->schema([
+                        Forms\Components\TextInput::make('hero_title')
+                            ->label('Hero Title')
+                            ->maxLength(255)
+                            ->placeholder('Enter hero title'),
+
+                        Forms\Components\FileUpload::make('hero_image')
+                            ->label('Hero Image')
+                            ->image()
+                            ->directory('hero')
+                            ->visibility('public')
+                            ->imageEditor()
+                            ->imageEditorAspectRatios([
+                                '16:9',
+                                '4:3',
+                                '1:1',
+                            ])
+                            ->maxSize(5120) // 5MB
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                            ->placeholder('Upload hero image'),
+
+                        Forms\Components\Textarea::make('hero_description')
+                            ->label('Hero Description')
+                            ->rows(3)
+                            ->maxLength(500)
+                            ->placeholder('Enter hero description'),
+                    ])
+                    ->columns(1)
+                    ->collapsible()
+                    ->visible(fn (Forms\Get $get) => $get('category') === 'hero'),
             ]);
     }
 
@@ -82,7 +117,8 @@ class MainResource extends Resource
                     ->label('ID')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                    ->hidden(fn ($record) => $record && $record->category === 'hero'),
                 Tables\Columns\TextColumn::make('title')
                     ->label('Title')
                     ->searchable()
@@ -99,14 +135,40 @@ class MainResource extends Resource
                         'primary' => 'koleksi_post',
                         'success' => 'todo_post',
                         'warning' => 'wisata',
+                        'danger' => 'hero',
                     ])
                     ->formatStateUsing(fn (string $state): string => match ($state) {
                         'koleksi_post' => 'Koleksi Post',
                         'todo_post' => 'Todo Post',
                         'wisata' => 'Wisata',
+                        'hero' => 'Hero',
                         default => $state,
                     })
                     ->sortable(),
+
+                Tables\Columns\TextColumn::make('hero_title')
+                    ->label('Hero Title')
+                    ->limit(30)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        $state = $column->getState();
+                        return $state && strlen($state) > 30 ? $state : null;
+                    })
+                    ->placeholder('No hero title')
+                    ->visible(fn ($record) => $record && $record->category === 'hero'),
+
+                Tables\Columns\ImageColumn::make('hero_image')
+                    ->label('Hero Image')
+                    ->visible(fn ($record) => $record && $record->category === 'hero'),
+
+                Tables\Columns\TextColumn::make('hero_description')
+                    ->label('Hero Description')
+                    ->limit(30)
+                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
+                        $state = $column->getState();
+                        return $state && strlen($state) > 30 ? $state : null;
+                    })
+                    ->placeholder('No hero description')
+                    ->visible(fn ($record) => $record && $record->category === 'hero'),
 
                 Tables\Columns\TextColumn::make('description')
                     ->label('Description')
@@ -115,7 +177,8 @@ class MainResource extends Resource
                         $state = $column->getState();
                         return $state && strlen($state) > 30 ? $state : null;
                     })
-                    ->placeholder('No description'),
+                    ->placeholder('No description')
+                    ->hidden(fn ($record) => $record && $record->category === 'hero'),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created')
@@ -136,6 +199,7 @@ class MainResource extends Resource
                         'koleksi_post' => 'Koleksi Post',
                         'todo_post' => 'Todo Post',
                         'wisata' => 'Wisata',
+                        'hero' => 'Hero',
                     ])
                     ->multiple(),
 

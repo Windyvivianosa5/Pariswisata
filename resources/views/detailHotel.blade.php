@@ -13,7 +13,7 @@
             <div class="relative group overflow-hidden rounded-lg shadow-md">
                 <img class="w-full h-[530px] object-cover transition-transform duration-500 group-hover:scale-105"
                      src="{{ asset('storage/' . $hotel->image) }}"
-                     alt="Foto utama {{ $hotel->name }}">
+                     alt="Main photo of {{ $hotel->name }}">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
 
@@ -23,7 +23,7 @@
                     <div class="relative group overflow-hidden rounded-lg shadow-md">
                         <img class="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-105"
                              src="{{ asset('storage/' . $hotel->detail->image2) }}"
-                             alt="Foto tambahan 1 {{ $hotel->name }}">
+                             alt="Additional photo 1 of {{ $hotel->name }}">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                     </div>
                 @endif
@@ -32,7 +32,7 @@
                     <div class="relative group overflow-hidden rounded-lg shadow-md">
                         <img class="w-full h-[260px] object-cover transition-transform duration-500 group-hover:scale-105"
                              src="{{ asset('storage/' . $hotel->detail->image3) }}"
-                             alt="Foto tambahan 2 {{ $hotel->name }}">
+                             alt="Additional photo 2 of {{ $hotel->name }}">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                     </div>
                 @endif
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="text-left md:text-right">
-                <p class="text-sm text-gray-500 mb-1">Harga per malam</p>
+                <p class="text-sm text-gray-500 mb-1">Price per night</p>
                 <p class="text-2xl md:text-3xl font-bold text-gray-800">
                     Rp {{ number_format($hotel->detail->harga ?? $hotel->harga, 0, ',', '.') }}
                 </p>
@@ -75,7 +75,7 @@
     {{-- DESKRIPSI --}}
     @if($hotel->deskripsi)
     <section class="mb-12">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Tentang Hotel</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">About the Hotel</h3>
         <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
             <p class="text-gray-600 leading-relaxed">{{ $hotel->deskripsi }}</p>
         </div>
@@ -84,37 +84,37 @@
 
     {{-- FASILITAS --}}
     <section class="mb-12">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Fasilitas Hotel</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Hotel Facilities</h3>
         <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                     <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <i class="ph ph-car-simple text-xl text-gray-700"></i>
                     </div>
-                    <span class="text-gray-700 font-medium">Tempat Parkir</span>
+                    <span class="text-gray-700 font-medium">Parking</span>
                 </div>
                 <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                     <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <i class="ph ph-wifi-high text-xl text-gray-700"></i>
                     </div>
-                    <span class="text-gray-700 font-medium">Wi-Fi Gratis</span>
+                    <span class="text-gray-700 font-medium">Free Wi-Fi</span>
                 </div>
                 <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                     <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <i class="ph ph-wind text-xl text-gray-700"></i>
                     </div>
-                    <span class="text-gray-700 font-medium">AC</span>
+                    <span class="text-gray-700 font-medium">Air Conditioning</span>
                 </div>
             </div>
             <div class="pt-4 border-t border-gray-100">
-                <p class="text-gray-600 leading-relaxed">Keseluruhan lokasi bagus untuk wisata, rekreasi, bersantap, dan berkeliling.</p>
+                <p class="text-gray-600 leading-relaxed">Overall location is great for sightseeing, recreation, dining, and getting around.</p>
             </div>
         </div>
     </section>
 
     {{-- MAPS --}}
     <section class="mb-12">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Lokasi Hotel</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Hotel Location</h3>
         <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
             <div id="map" class="w-full h-[400px]"></div>
         </div>
@@ -123,9 +123,9 @@
                 <i class="ph ph-info text-blue-600 text-xl mt-0.5"></i>
                 <div>
                     <p class="text-sm text-gray-700">
-                        <span class="font-semibold">Alamat:</span> {{ $hotel->detail->alamat ?? $hotel->alamat }}
+                        <span class="font-semibold">Address:</span> {{ $hotel->detail->alamat ?? $hotel->alamat }}
                     </p>
-                    <p class="text-sm text-gray-600 mt-1">Klik marker pada peta untuk melihat detail lokasi</p>
+                    <p class="text-sm text-gray-600 mt-1">Click the marker on the map to view location details</p>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
 
     {{-- INFO TAMBAHAN --}}
     <section class="bg-gray-50 rounded-lg p-6 border border-gray-100">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Informasi Penting</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Important Information</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex items-start gap-3">
                 <i class="ph ph-clock text-gray-400 text-xl mt-0.5"></i>
@@ -145,8 +145,8 @@
             <div class="flex items-start gap-3">
                 <i class="ph ph-phone text-gray-400 text-xl mt-0.5"></i>
                 <div>
-                    <p class="font-semibold text-gray-800 text-sm">Kontak Hotel</p>
-                    <p class="text-sm text-gray-600">Hubungi resepsionis untuk informasi lebih lanjut</p>
+                    <p class="font-semibold text-gray-800 text-sm">Hotel Contact</p>
+                    <p class="text-sm text-gray-600">Contact the reception for more information</p>
                 </div>
             </div>
         </div>

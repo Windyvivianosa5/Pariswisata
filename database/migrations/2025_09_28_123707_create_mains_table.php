@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('mains', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('category');
-            $table->longText('description')->nulllable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

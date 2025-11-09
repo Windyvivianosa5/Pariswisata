@@ -6,23 +6,23 @@
       <div class="space-y-3 text-center md:text-left">
         <h4 class="text-lg font-serif font-semibold">Explore Riau</h4>
         <p class="text-sm text-gray-700">
-          Portal wisata budaya, sejarah, dan alam Riau. Temukan pesona Melayu yang kaya akan sejarah dan keindahan.
+          Cultural, historical, and nature tourism portal of Riau. Discover the charm of Malay heritage rich in history and beauty.
         </p>
       </div>
 
       <!-- Navigasi -->
       <div class="space-y-3 text-center">
-        <h4 class="text-lg font-serif font-semibold">Navigasi</h4>
+        <h4 class="text-lg font-serif font-semibold">Navigation</h4>
         <ul class="space-y-2 text-sm text-gray-700">
-          <li><a href="#" class="hover:underline">Beranda</a></li>
-          <li><a href="#" class="hover:underline">Wisata Sejarah</a></li>
-          <li><a href="#" class="hover:underline">Kontak</a></li>
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Historical Tours</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
         </ul>
       </div>
 
       <!-- Kontak -->
       <div class="space-y-3 text-center md:text-right">
-        <h4 class="text-lg font-serif font-semibold">Kontak</h4>
+        <h4 class="text-lg font-serif font-semibold">Contact</h4>
         <ul class="space-y-2 text-sm text-gray-700">
           <li>
             <a href="#" class="hover:underline flex items-center justify-center md:justify-end gap-2">

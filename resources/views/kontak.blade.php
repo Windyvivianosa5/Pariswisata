@@ -6,10 +6,10 @@
     <section class="mb-16">
         <div class="text-center mb-8">
             <h1 class="text-3xl font-bold text-gray-800 mb-3">
-                Wisata dan Liburan ke Riau
+                Travel and Vacation in Riau
             </h1>
             <p class="text-gray-600 max-w-2xl mx-auto">
-                Dapatkan informasi lengkap tentang Istana Siak Sri Indrapura dan destinasi wisata lainnya
+                Get complete information about Siak Palace (Istana Siak Sri Indrapura) and other travel destinations
             </p>
             <div class="w-20 h-0.5 bg-gray-300 mx-auto mt-4"></div>
         </div>
@@ -20,7 +20,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
                 <h2 class="text-2xl font-semibold mb-1">Istana Siak Sri Indrapura</h2>
-                <p class="text-sm opacity-90">Warisan Budaya Melayu</p>
+                <p class="text-sm opacity-90">Malay Cultural Heritage</p>
             </div>
         </div>
     </section>
@@ -31,8 +31,8 @@
             <!-- Contact Information -->
             <div>
                 <div class="mb-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Informasi Kontak</h3>
-                    <p class="text-gray-600">Hubungi kami untuk informasi lebih lanjut tentang kunjungan wisata</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Contact Information</h3>
+                    <p class="text-gray-600">Contact us for more information about your visit</p>
                 </div>
 
                 <div class="space-y-6">
@@ -82,7 +82,7 @@
                                 <i class="ph ph-clock text-gray-700 text-2xl"></i>
                             </div>
                             <div class="flex-1">
-                                <h4 class="text-sm text-gray-500 mb-1">Setiap Hari</h4>
+                                <h4 class="text-sm text-gray-500 mb-1">Every Day</h4>
                                 <p class="text-lg font-semibold text-gray-800">07.00 - 17.00 WIB</p>
                             </div>
                         </div>
@@ -93,8 +93,8 @@
             <!-- Map -->
             <div>
                 <div class="mb-4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Lokasi Kami</h3>
-                    <p class="text-gray-600">Temukan kami di peta untuk kemudahan kunjungan Anda</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Location</h3>
+                    <p class="text-gray-600">Find us on the map for easier visits</p>
                 </div>
 
                 <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
@@ -115,7 +115,7 @@
                     <div class="flex items-start gap-3">
                         <i class="ph ph-info text-blue-600 text-xl mt-0.5"></i>
                         <p class="text-sm text-gray-700">
-                            Klik pada peta untuk membuka di Google Maps dan mendapatkan petunjuk arah
+                            Click on the map to open in Google Maps and get directions
                         </p>
                     </div>
                 </div>
@@ -126,27 +126,27 @@
     <!-- Additional Info Section -->
     <section class="bg-gray-50 rounded-lg p-8 border border-gray-100">
         <div class="text-center mb-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-3">Informasi Kunjungan</h3>
-            <p class="text-gray-600">Hal-hal yang perlu Anda ketahui sebelum berkunjung</p>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Visitor Information</h3>
+            <p class="text-gray-600">Things you need to know before visiting</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                 <div class="text-3xl mb-3">🎫</div>
-                <h4 class="font-semibold text-gray-800 mb-2">Tiket Masuk</h4>
-                <p class="text-sm text-gray-600">Informasi harga tiket dapat ditanyakan langsung</p>
+                <h4 class="font-semibold text-gray-800 mb-2">Entrance Ticket</h4>
+                <p class="text-sm text-gray-600">Ticket prices can be requested directly</p>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                 <div class="text-3xl mb-3">📸</div>
-                <h4 class="font-semibold text-gray-800 mb-2">Foto & Video</h4>
-                <p class="text-sm text-gray-600">Diperbolehkan untuk keperluan dokumentasi pribadi</p>
+                <h4 class="font-semibold text-gray-800 mb-2">Photos & Videos</h4>
+                <p class="text-sm text-gray-600">Permitted for personal documentation</p>
             </div>
 
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
                 <div class="text-3xl mb-3">👕</div>
-                <h4 class="font-semibold text-gray-800 mb-2">Pakaian</h4>
-                <p class="text-sm text-gray-600">Gunakan pakaian sopan dan nyaman</p>
+                <h4 class="font-semibold text-gray-800 mb-2">Attire</h4>
+                <p class="text-sm text-gray-600">Wear modest and comfortable clothing</p>
             </div>
         </div>
     </section>

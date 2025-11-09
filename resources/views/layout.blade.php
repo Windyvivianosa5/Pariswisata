@@ -4,24 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jelajahi kemegahan Istana Siak Sri Indrapura, warisan bersejarah Kesultanan Siak. Temukan arsitektur unik perpaduan Melayu, Arab, dan Eropa, serta koleksi benda kerajaan yang tak ternilai.">
-<meta name="keywords" content="Istana Siak, Sejarah Siak, Kesultanan Siak, Wisata Riau, Istana Matahari Timur, Sultan Syarif Kasim, Peninggalan Sejarah">
-
+  <meta name="description" content="Explore the grandeur of Siak Palace (Istana Siak Sri Indrapura), a historic legacy of the Siak Sultanate. Discover unique architecture blending Malay, Arab, and European influences, and a priceless collection of royal artifacts.">
+<meta name="keywords" content="Siak Palace, Siak History, Siak Sultanate, Riau Tourism, Istana Matahari Timur, Sultan Syarif Kasim, Historical Heritage">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://istanasiak.blk-pariwisata.my.id/">
-<meta property="og:title" content="Istana Siak Sri Indrapura - Kemegahan Warisan Kesultanan Melayu">
-<meta property="og:description" content="Jelajahi kemegahan Istana Siak Sri Indrapura, warisan bersejarah Kesultanan Siak. Temukan arsitektur unik perpaduan Melayu, Arab, dan Eropa, serta koleksi benda kerajaan yang tak ternilai.">
+<meta property="og:title" content="Siak Palace Sri Indrapura - Majesty of the Malay Sultanate">
+<meta property="og:description" content="Explore the grandeur of Siak Palace, historic legacy of the Siak Sultanate. Unique architecture and priceless royal collections await.">
 <meta property="og:image" content="https://istanasiak.blk-pariwisata.my.id/assets/img/hero3.jpg">
-
 <link rel="shortcut icon" href="{{ asset('assets/img/logo-istanasiak.png')}}" type="image/x-icon">
-<title>Istana Siak Sri Indrapura - Sejarah & Kemegahan Kesultanan Melayu</title>
-  <title>Web Istana Siak Sri Indrapura </title>
+<title>Siak Palace Sri Indrapura — History & Majesty of the Malay Sultanate</title>
+  <title>Siak Palace Sri Indrapura Website</title>
   <link href='assets/style/style.css' rel='stylesheet'>
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  <link
       rel="stylesheet"
       type="text/css"
@@ -32,10 +30,10 @@
 {{$slot}}
 
 <a
-  href="https://wa.me/6287810921648?text=Halo,%20saya%20ingin%20bertanya%20tentang%20paket%20wisata%20ke%20Istana%20Siak%20Sri%20Indrapura."
+  href="https://wa.me/6287810921648?text=Hello,%20I%20would%20like%20to%20ask%20about%20tour%20packages%20to%20Siak%20Palace%20Sri%20Indrapura."
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Hubungi kami via WhatsApp"
+  aria-label="Contact us via WhatsApp"
   class="fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition duration-300 ease-in-out hover:scale-110 hover:bg-[#128C7E]"
 >
   <svg
@@ -51,6 +49,8 @@
     />
   </svg>
 </a>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
 </body>
 
 </html>
